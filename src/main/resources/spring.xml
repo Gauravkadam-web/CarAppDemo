@@ -7,12 +7,14 @@
     <!-- bean definitions here -->
     <bean id="car" class="com.stackninjas.Car">
         <property name="battery" ref="battery"/>
-        <property name="engine" ref="engine"/>
+        <property name="engine" ref="petrolEngine"/>
+<!--        <property name="engine" ref="dieselEngine"/>-->
         <property name="tyre" ref="tyre"/>
     </bean>
 
     <bean id="battery" class="com.stackninjas.Battery"/>
-    <bean id="engine" class="com.stackninjas.Engine"/>
+    <bean id="petrolEngine" class="com.stackninjas.PetrolEngine"/>
+    <bean id="dieselEngine" class="com.stackninjas.DieselEngine"/>
     <bean id="tyre" class="com.stackninjas.Tyre"/>
 
 </beans>

@@ -1,8 +1,5 @@
 package com.stackninjas;
 
-public class Engine {
-    public void start(){
-        System.out.println("Engine is Started....🚂🚂");
-    }
-
+public interface Engine {
+    void start();
 }
