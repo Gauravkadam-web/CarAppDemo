@@ -42,10 +42,10 @@
         <property name="fuelPump" ref="fuelPump"/>
     </bean>
 
-    <bean id="tyre1" class="com.stackninjas.Tyre"/>
-    <bean id="tyre2" class="com.stackninjas.Tyre"/>
-    <bean id="tyre3" class="com.stackninjas.Tyre"/>
-    <bean id="tyre4" class="com.stackninjas.Tyre"/>
+    <bean id="tyre1" class="com.stackninjas.TubeTyre"/>
+    <bean id="tyre2" class="com.stackninjas.TubelessTyre"/>
+    <bean id="tyre3" class="com.stackninjas.TubeTyre"/>
+    <bean id="tyre4" class="com.stackninjas.TubelessTyre"/>
 
     <bean id="fuelPump" class="com.stackninjas.FuelPump"/>
 
