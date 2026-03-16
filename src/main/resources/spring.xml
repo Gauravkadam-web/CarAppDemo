@@ -34,11 +34,19 @@
     </bean>
 
     <bean id="battery" class="com.stackninjas.Battery"/>
-    <bean id="petrolEngine" class="com.stackninjas.PetrolEngine"/>
-    <bean id="dieselEngine" class="com.stackninjas.DieselEngine"/>
+
+    <bean id="petrolEngine" class="com.stackninjas.PetrolEngine">
+        <property name="fuelPump" ref="fuelPump"/>
+    </bean>
+    <bean id="dieselEngine" class="com.stackninjas.DieselEngine">
+        <property name="fuelPump" ref="fuelPump"/>
+    </bean>
+
     <bean id="tyre1" class="com.stackninjas.Tyre"/>
     <bean id="tyre2" class="com.stackninjas.Tyre"/>
     <bean id="tyre3" class="com.stackninjas.Tyre"/>
     <bean id="tyre4" class="com.stackninjas.Tyre"/>
+
+    <bean id="fuelPump" class="com.stackninjas.FuelPump"/>
 
 </beans>
