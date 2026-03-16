@@ -1,9 +1,20 @@
 package com.stackninjas;
 
+import java.util.List;
+
 public class Car {
     private Battery battery;
     private Engine engine;
-    private Tyre tyre;
+    private List<Tyre> tyres;
+
+    public Car() {
+    }
+
+    public Car(Battery battery, Engine engine, List<Tyre> tyres) {
+        this.battery = battery;
+        this.engine = engine;
+        this.tyres = tyres;
+    }
 
     public Battery getBattery() {
         return battery;
@@ -21,18 +32,19 @@ public class Car {
         this.engine = engine;
     }
 
-    public Tyre getTyre() {
-        return tyre;
+    public List<Tyre> getTyres() {
+        return tyres;
     }
 
-    public void setTyre(Tyre tyre) {
-        this.tyre = tyre;
+    public void setTyres(List<Tyre> tyres) {
+        this.tyres = tyres;
     }
 
     public void drive(){
         battery.supply();
         engine.start();
-        tyre.rotate();
+        for(Tyre tyre : tyres)
+            tyre.rotate();
         System.out.println("Car is Running....🏎️💨");
     }
 
@@ -41,7 +53,7 @@ public class Car {
         return "Car{" +
                 "battery=" + battery +
                 ", engine=" + engine +
-                ", tyre=" + tyre +
+                ", tyres=" + tyres +
                 '}';
     }
 }

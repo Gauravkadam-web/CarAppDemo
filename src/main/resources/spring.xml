@@ -9,12 +9,36 @@
         <property name="battery" ref="battery"/>
         <property name="engine" ref="petrolEngine"/>
 <!--        <property name="engine" ref="dieselEngine"/>-->
-        <property name="tyre" ref="tyre"/>
+        <property name="tyres">
+            <list>
+                <ref bean="tyre1"/>
+                <ref bean="tyre2"/>
+                <ref bean="tyre3"/>
+                <ref bean="tyre4"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="car1" class="com.stackninjas.Car">
+       <constructor-arg type="Battery" ref="battery"/>
+        <constructor-arg type="Engine" ref="dieselEngine"/>
+        <constructor-arg type="java.util.List">
+            <list>
+                <ref bean="tyre1"/>
+                <ref bean="tyre2"/>
+                <ref bean="tyre3"/>
+                <ref bean="tyre4"/>
+            </list>
+
+        </constructor-arg>
     </bean>
 
     <bean id="battery" class="com.stackninjas.Battery"/>
     <bean id="petrolEngine" class="com.stackninjas.PetrolEngine"/>
     <bean id="dieselEngine" class="com.stackninjas.DieselEngine"/>
-    <bean id="tyre" class="com.stackninjas.Tyre"/>
+    <bean id="tyre1" class="com.stackninjas.Tyre"/>
+    <bean id="tyre2" class="com.stackninjas.Tyre"/>
+    <bean id="tyre3" class="com.stackninjas.Tyre"/>
+    <bean id="tyre4" class="com.stackninjas.Tyre"/>
 
 </beans>
